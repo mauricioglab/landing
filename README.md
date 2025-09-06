@@ -67,12 +67,39 @@ Una landing page moderna, responsive y con personalidad para Mauricio González,
 - Google Fonts (Montserrat + Inter)
 - Font Awesome para iconos
 
-## 🚀 Cómo usar
+## 🚀 Scripts Disponibles
 
-1. Abre `index.html` en tu navegador
-2. La página es completamente funcional sin servidor
-3. El formulario simula el envío (2 segundos de delay)
-4. Todos los enlaces están preparados para ser actualizados
+### Desarrollo
+```bash
+# Iniciar servidor de desarrollo (con acceso desde red local)
+npm run dev
+
+# Iniciar servidor de desarrollo (alternativo)
+npm start
+
+# Previsualizar build de producción
+npm run preview
+
+# Verificar tipos y errores
+npm run check
+```
+
+### Despliegue
+```bash
+# Build + commit + push automático
+npm run deploy
+
+# Build + commit + push forzado (si hay conflictos)
+npm run deploy:force
+
+# Solo hacer build
+npm run build
+```
+
+### Uso Rápido
+1. **Desarrollo**: `npm run dev` y abre http://localhost:4321
+2. **Despliegue**: `npm run deploy` para subir cambios a GitHub Pages
+3. **Verificación**: `npm run check` para revisar errores de TypeScript
 
 ## 📝 Personalización
 
