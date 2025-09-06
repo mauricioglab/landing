@@ -2,57 +2,45 @@
 // Footer component redesigned
 ---
 
-<footer class="bg-neutral-900 text-white">
-  <div class="container-custom py-12">
-    <div class="grid md:grid-cols-3 gap-8 items-center">
-      <!-- Brand -->
+<footer class="bg-gray-900 text-white">
+  <div class="container-custom py-8">
+    <div class="grid md:grid-cols-3 gap-8 mb-6">
       <div class="text-center md:text-left">
-        <h3 class="text-xl font-display font-bold mb-2">Mauricio González</h3>
-        <p class="text-neutral-400 text-sm mb-1">
-          <strong>+10 años enseñando tecnología • Especialista en IA práctica</strong>
-        </p>
-        <p class="text-neutral-500 text-xs italic">
-          "Sobreviví a la tecnología para contártelo"
-        </p>
-      </div>
-      
-      <!-- Social links -->
-      <div class="flex justify-center space-x-6">
-        <a href="#" class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors">
-          <i class="fab fa-linkedin text-white"></i>
-        </a>
-        <a href="#" class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors">
-          <i class="fab fa-github text-white"></i>
-        </a>
-        <a href="#" class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors">
-          <i class="fab fa-twitter text-white"></i>
-        </a>
-        <a href="mailto:mauricio@ejemplo.com" class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors">
-          <i class="fas fa-envelope text-white"></i>
-        </a>
-      </div>
-      
-      <!-- Copyright and tech stack -->
-      <div class="text-center md:text-right space-y-2">
-        <div class="flex justify-center md:justify-end items-center space-x-2 text-neutral-400 text-sm">
-          <span>Powered by</span>
-          <a href="https://astro.build" target="_blank" rel="noopener" class="flex items-center space-x-1 hover:text-white transition-colors">
-            <i class="fab fa-astro text-orange-500" title="Astro"></i>
-            <span class="font-medium">Astro</span>
-          </a>
-        </div>
-        <p class="text-neutral-400 text-sm">
-          Creado por Mauricio González – 2025
-        </p>
-        <div class="flex justify-center md:justify-end space-x-4 text-xs text-neutral-500">
-          <a href="cv.html" class="hover:text-white transition-colors">CV Completo</a>
-          <a href="cv.html" class="hover:text-white transition-colors">Disertación</a>
-          <a href="#servicios" class="hover:text-white transition-colors">Desarrollo & Productos</a>
-          <a href="https://instagram.com/tu_usuario_3d" target="_blank" class="hover:text-white transition-colors">
+        <h3 class="text-lg font-display font-bold mb-3">Servicios</h3>
+        <div class="space-y-2">
+          <a href="#servicios" class="block text-gray-400 hover:text-white transition-colors">Desarrollo & Productos</a>
+          <a href="cv.html" class="block text-gray-400 hover:text-white transition-colors">Disertación</a>
+          <a href="https://instagram.com/tu_usuario_3d" target="_blank" class="block text-gray-400 hover:text-white transition-colors">
             <i class="fab fa-instagram mr-1"></i> Impresión 3D
           </a>
         </div>
       </div>
+      
+      <div class="text-center">
+        <h3 class="text-lg font-display font-bold mb-3">Contacto</h3>
+        <div class="space-y-2">
+          <a href="https://www.linkedin.com/in/mauricioglab/" target="_blank" class="block text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-linkedin mr-1"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+      
+      <div class="text-center md:text-right">
+        <h3 class="text-lg font-display font-bold mb-3">Navegación</h3>
+        <div class="space-y-2">
+          <a href="/landing/" class="block text-gray-400 hover:text-white transition-colors">Inicio</a>
+          <a href="cv.html" class="block text-gray-400 hover:text-white transition-colors">CV Completo</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center border-t border-gray-800 pt-6">
+      <p class="text-gray-400 text-sm">
+        © 2025 Mauricio González. Todos los derechos reservados.
+      </p>
+      <p class="text-gray-500 text-xs mt-2">
+        Powered by <a href="https://astro.build" target="_blank" class="hover:text-white transition-colors">Astro</a> • Para información detallada, contactar por LinkedIn
+      </p>
     </div>
   </div>
 </footer>
