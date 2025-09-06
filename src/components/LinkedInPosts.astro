@@ -1,0 +1,132 @@
+---
+// LinkedIn posts section with recent content
+---
+
+<section class="linkedin-posts">
+  <div class="container">
+    <h2 class="section-title">Mis Posts Recientes 📝</h2>
+    <p class="section-subtitle">Sobre IA y programación, sin palabrerío corporativo</p>
+    
+    <div class="posts-grid">
+      <div class="post-card featured-post">
+        <div class="post-icon">
+          <i class="fab fa-linkedin"></i>
+        </div>
+        <h3>Cómo enseñé IA a 50 personas sin que nadie se durmiera</h3>
+        <p>Mi método para explicar conceptos complejos de forma simple (spoiler: muchos ejemplos prácticos)...</p>
+        <a href="#" class="post-link">Leer en LinkedIn <i class="fas fa-external-link-alt"></i></a>
+      </div>
+      
+      <div class="post-card">
+        <div class="post-icon">
+          <i class="fab fa-linkedin"></i>
+        </div>
+        <h3>Los 3 errores más comunes cuando enseño IA</h3>
+        <p>Y cómo los evito para que realmente aprendas a implementar...</p>
+        <a href="#" class="post-link">Leer post <i class="fas fa-external-link-alt"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .linkedin-posts {
+    padding: 2rem 0;
+    background-color: white;
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .post-card {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid #0077B5;
+    transition: all 0.3s ease;
+  }
+
+  .post-card.featured-post {
+    background: linear-gradient(135deg, #0077B5, #00A0DC);
+    color: white;
+    border-left: 4px solid #ffffff;
+  }
+
+  .post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .post-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0077B5;
+  }
+
+  .featured-post .post-icon {
+    color: white;
+  }
+
+  .post-card h3 {
+    color: #111827;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .featured-post h3 {
+    color: white;
+  }
+
+  .post-card p {
+    color: #4B5563;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .featured-post p {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .post-link {
+    color: #0077B5;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .featured-post .post-link {
+    color: white;
+  }
+
+  .post-link:hover {
+    color: #005885;
+  }
+
+  .featured-post .post-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .linkedin-posts {
+      padding: 1.5rem 0;
+    }
+    
+    .posts-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .post-card {
+      padding: 1.5rem;
+    }
+  }
+</style>

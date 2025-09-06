@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Completo - Mauricio González</title>
+    <meta name="description" content="CV completo de Mauricio González - Docente, Desarrollador Fullstack y Especialista en IA">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        },
+                        accent: {
+                            500: '#f97316',
+                            600: '#ea580c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-padding {
+            padding: 4rem 0;
+        }
+        .container-custom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #3b82f6;
+            border: 2px solid #3b82f6;
+        }
+        .btn-outline:hover {
+            background: #3b82f6;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container-custom py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-2xl font-display font-bold gradient-text">
+                        Mauricio González
+                    </a>
+                    <span class="text-gray-500 text-sm">CV Completo</span>
+                </div>
+                <a href="index.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Volver al inicio
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-50 to-orange-50 section-padding">
+        <div class="container-custom">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">
+                    CV Completo
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Docente, Desarrollador Fullstack y Especialista en IA con +10 años de experiencia
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+                    <span><i class="fas fa-map-marker-alt mr-1"></i> Argentina</span>
+                    <span><i class="fas fa-envelope mr-1"></i> mauricio@ejemplo.com</span>
+                    <span><i class="fas fa-phone mr-1"></i> +54 9 11 1234-5678</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Docente -->
+    <section class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-display font-bold text-gray-900 mb-4">
+                        🎓 Experiencia Docente
+                    </h2>
+                    <p class="text-lg text-gray-600">+10 años enseñando tecnología de forma práctica</p>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="card p-8">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-display font-bold text-gray-900 mb-2">
+                                    Docente de Tecnología
+                                </h3>
+                                <p class="text-blue-600 font-semibold mb-3">2014 - Presente</p>
+                                <p class="text-gray-600 mb-4">
+                                    Enseño programación, desarrollo web y IA en instituciones educativas y empresas. 
+                                    Especializado en hacer que conceptos complejos sean accesibles para todos.
+                                </p>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i> +500 estudiantes capacitados</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i> Cursos de Angular, C#, Python, IA</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i> Metodología práctica y hands-on</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-8">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-microphone text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-display font-bold text-gray-900 mb-2">
+                                    Disertante en Eventos Tech
+                                </h3>
+                                <p class="text-orange-600 font-semibold mb-3">2018 - Presente</p>
+                                <p class="text-gray-600 mb-4">
+                                    Charlas y talleres sobre IA, automatización y desarrollo en empresas y eventos tecnológicos.
+                                </p>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i> +50 charlas realizadas</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i> Empresas como TechCorp, DataLab, InnovateTech</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i> Temas: IA práctica, Prompt Engineering, n8n</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Técnica -->
+    <section class="section-padding bg-gray-50">
+        <div class="container-custom">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-display font-bold text-gray-900 mb-4">
+                        👨‍💻 Experiencia Técnica
+                    </h2>
+                    <p class="text-lg text-gray-600">Desarrollo fullstack y especialización en IA</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="card p-8">
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-code text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-display font-bold text-gray-900 mb-2">
+                                Desarrollador Fullstack Senior
+                            </h3>
+                            <p class="text-green-600 font-semibold">2016 - Presente</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Tecnologías Principales:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Angular</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">C#</span>
+                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Python</span>
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Node.js</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Especialización:</h4>
+                                <p class="text-gray-600">Desarrollo de aplicaciones web complejas, APIs REST, integración de IA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-8">
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-robot text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-display font-bold text-gray-900 mb-2">
+                                Especialista en IA
+                            </h3>
+                            <p class="text-purple-600 font-semibold">2020 - Presente</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Especialidades:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Prompt Engineering</span>
+                                    <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">n8n</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Automatización</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Enfoque:</h4>
+                                <p class="text-gray-600">Implementación práctica de IA en empresas, automatización de procesos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Destacados -->
+    <section class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-display font-bold text-gray-900 mb-4">
+                        ⚡ Proyectos Destacados
+                    </h2>
+                    <p class="text-lg text-gray-600">Casos de éxito en enseñanza y desarrollo</p>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="card p-8">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-users text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-display font-bold text-gray-900 mb-2">
+                                    Capacitación Masiva en IA - TechCorp
+                                </h3>
+                                <p class="text-gray-600 mb-4">
+                                    Capacité a 20 desarrolladores en IA práctica en solo 3 días. 
+                                    Resultado: implementaron 5 automatizaciones en el primer mes.
+                                </p>
+                                <div class="grid grid-cols-3 gap-4 text-center">
+                                    <div class="bg-blue-50 p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-blue-600">20</div>
+                                        <div class="text-sm text-gray-600">Desarrolladores</div>
+                                    </div>
+                                    <div class="bg-green-50 p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-green-600">5</div>
+                                        <div class="text-sm text-gray-600">Automatizaciones</div>
+                                    </div>
+                                    <div class="bg-purple-50 p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-purple-600">100%</div>
+                                        <div class="text-sm text-gray-600">Aplicación real</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-8">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-cogs text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-display font-bold text-gray-900 mb-2">
+                                    Sistema de Automatización - DataLab
+                                </h3>
+                                <p class="text-gray-600 mb-4">
+                                    Desarrollé un sistema completo de automatización que redujo el tiempo de procesamiento de datos en un 60%.
+                                </p>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i> Stack: Angular + C# + Python + n8n</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i> 60% reducción en tiempo de procesamiento</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i> Integración con APIs externas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Otros Servicios -->
+    <section class="section-padding bg-gray-50">
+        <div class="container-custom">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-display font-bold text-gray-900 mb-4">
+                        🛠️ Otros Servicios
+                    </h2>
+                    <p class="text-lg text-gray-600">Desarrollo freelance, productos y más</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="card p-6 text-center">
+                        <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-laptop-code text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-gray-900 mb-3">
+                            Desarrollo Freelance
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Aplicaciones web personalizadas, APIs, integraciones con IA
+                        </p>
+                        <a href="desarrollo.html" class="btn btn-outline w-full">
+                            Ver servicios
+                        </a>
+                    </div>
+
+                    <div class="card p-6 text-center">
+                        <div class="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cube text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-gray-900 mb-3">
+                            Productos Digitales
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Herramientas y aplicaciones que resuelven problemas específicos
+                        </p>
+                        <a href="productos.html" class="btn btn-outline w-full">
+                            Ver productos
+                        </a>
+                    </div>
+
+                    <div class="card p-6 text-center">
+                        <div class="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-print text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-gray-900 mb-3">
+                            Impresión 3D
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Prototipado rápido y piezas personalizadas para proyectos
+                        </p>
+                        <a href="impresion3d.html" class="btn btn-outline w-full">
+                            Ver trabajos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+        <div class="container-custom">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-display font-bold mb-4">
+                    ¿Trabajamos juntos?
+                </h2>
+                <p class="text-xl text-blue-100 mb-8">
+                    Si necesitás capacitación en IA, desarrollo de software o consultoría técnica, 
+                    estoy listo para ayudarte.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html#contacto" class="btn btn-primary text-lg px-8 py-4">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Contactame
+                    </a>
+                    <a href="https://calendly.com/mauricio-gonzalez" class="btn btn-outline text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-blue-600" target="_blank">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Agendar sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container-custom py-8">
+            <div class="text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 Mauricio González. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

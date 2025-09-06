@@ -1,0 +1,114 @@
+---
+// Education section component - dedicated to educational transformation
+---
+
+<section id="educacion" class="py-16 bg-gradient-to-r from-purple-50 to-blue-50">
+  <div class="container-custom">
+    <div class="max-w-7xl mx-auto">
+      <!-- Header compacto -->
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-4">
+          <i class="fas fa-graduation-cap mr-2"></i>
+          Especialización Educativa
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-neutral-900 mb-4">
+          Transformando la Educación con Tecnología
+        </h2>
+        <p class="text-lg text-neutral-600 max-w-3xl mx-auto mb-2">
+          Autor de 2 libros sobre tecnologías en el aula, con experiencia diseñando software educativo y capacitando docentes en el uso efectivo de TICs.
+        </p>
+        <p class="text-sm text-neutral-500 italic">
+          <i class="fas fa-graduation-cap mr-1"></i>
+          "Si logré que un docente de 60 años use IA, tu institución también puede"
+        </p>
+      </div>
+      
+      <!-- Layout en columnas compacto -->
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <!-- Columna izquierda: Credibilidad -->
+        <div class="bg-white rounded-2xl p-6 shadow-lg">
+          <h3 class="text-xl font-display font-bold text-neutral-900 mb-6 text-center">
+            ¿Por qué confían en mí las instituciones educativas?
+          </h3>
+          
+          <div class="space-y-4">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-book text-white text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-neutral-900">2 Libros Publicados</h4>
+                <p class="text-neutral-600 text-sm">Sobre tecnologías en el aula</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-code text-white text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-neutral-900">Software Educativo</h4>
+                <p class="text-neutral-600 text-sm">Diseñado para instituciones</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-chalkboard-teacher text-white text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-neutral-900">Capacitación Docente</h4>
+                <p class="text-neutral-600 text-sm">En uso efectivo de TICs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Columna derecha: CTA -->
+        <div class="text-center lg:text-left">
+          <div class="bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl p-8 text-white">
+            <h3 class="text-2xl font-display font-bold mb-4">
+              ¿Listo para transformar tu institución?
+            </h3>
+            <p class="text-primary-100 mb-6">
+              Charlas, cursos y consultorías diseñadas específicamente para el sector educativo.
+            </p>
+            <a href="#servicios" class="btn bg-white text-primary-600 hover:bg-primary-50 text-base px-6 py-3 shadow-xl">
+              <i class="fas fa-arrow-right mr-2"></i>
+              Ver servicios educativos
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Confetti for education CTA
+  document.addEventListener('DOMContentLoaded', function() {
+    const educationCTA = document.querySelector('a[href="#contacto"]');
+    
+    if (educationCTA) {
+      educationCTA.addEventListener('click', function() {
+        celebrateWithConfetti();
+      });
+    }
+  });
+
+  function celebrateWithConfetti() {
+    if (typeof confetti === 'undefined') {
+      console.log('🎉 Confetti would happen here!');
+      return;
+    }
+    
+    const colors = ['#8b5cf6', '#3b82f6', '#10b981', '#f97316', '#ef4444'];
+    
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: colors
+    });
+  }
+</script>

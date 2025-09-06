@@ -1,0 +1,89 @@
+---
+// Social proof banner with subtle validation
+---
+
+<section class="social-proof-banner">
+  <div class="container">
+    <div class="proof-content">
+      <span class="proof-text">Ya 15+ personas probaron mis experimentos y nadie salió lastimado 🚀</span>
+      <div class="proof-avatars">
+        <div class="avatar-stack">
+          <div class="avatar">M</div>
+          <div class="avatar">A</div>
+          <div class="avatar">L</div>
+          <div class="avatar">+12</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .social-proof-banner {
+    background: linear-gradient(135deg, #2563EB, #3B82F6);
+    padding: 1rem 0;
+    color: white;
+  }
+
+  .proof-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .proof-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
+
+  .avatar-stack {
+    display: flex;
+    gap: -0.5rem;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-left: -0.5rem;
+  }
+
+  .avatar:first-child {
+    margin-left: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .proof-content {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+    
+    .proof-text {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .proof-text {
+      font-size: 0.95rem;
+    }
+    
+    .avatar {
+      width: 35px;
+      height: 35px;
+      font-size: 0.75rem;
+    }
+  }
+</style>

@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Experience from '../components/Experience.astro';
+import FeaturedProject from '../components/FeaturedProject.astro';
+import Services from '../components/Services.astro';
+import EducationSection from '../components/EducationSection.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Mauricio González - IA, Programación y Enseñanza"
+  description="Transformo tecnología compleja en soluciones prácticas que podés usar hoy. Consultorías, mentorías y cursos de IA y programación."
+>
+  <Hero />
+  <Experience />
+  <FeaturedProject />
+  <EducationSection />
+  <Services />
+  <Contact />
+  <Footer />
+</Layout>
+
+<script>
+  // Scroll animations
+  document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    }, observerOptions);
+    
+    // Add animation to elements
+    const animatedElements = document.querySelectorAll(
+      '.card, .section-padding > div'
+    );
+    
+    animatedElements.forEach(el => {
+      observer.observe(el);
+    });
+
+    // Easter egg: Konami code for extra confetti
+    let konamiCode = [];
+    const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // ↑↑↓↓←→←→BA
+    
+    document.addEventListener('keydown', function(e) {
+      konamiCode.push(e.keyCode);
+      if (konamiCode.length > konamiSequence.length) {
+        konamiCode.shift();
+      }
+      
+      if (JSON.stringify(konamiCode) === JSON.stringify(konamiSequence)) {
+        celebrateWithConfetti(true); // Extra celebration
+        showNotification('¡Encontraste el código secreto! 🎉', 'success');
+        konamiCode = [];
+      }
+    });
+  });
+
+  // Confetti celebration function
+  function celebrateWithConfetti(isExtra = false) {
+    if (typeof confetti === 'undefined') {
+      console.log('🎉 Confetti would happen here!');
+      return;
+    }
+    
+    const colors = ['#3b82f6', '#f97316', '#10b981', '#ef4444', '#8b5cf6'];
+    
+    if (isExtra) {
+      // Extra special celebration
+      const duration = 3000;
+      const animationEnd = Date.now() + duration;
+      
+      (function frame() {
+        confetti({
+          particleCount: 7,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: colors
+        });
+        confetti({
+          particleCount: 7,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: colors
+        });
+        
+        if (Date.now() < animationEnd) {
+          requestAnimationFrame(frame);
+        }
+      }());
+    } else {
+      // Regular celebration
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: colors
+      });
+    }
+  }
+
+  // Notification system
+  function showNotification(message, type = 'info') {
+    // Remove existing notifications
+    const existingNotifications = document.querySelectorAll('.notification');
+    existingNotifications.forEach(notification => notification.remove());
+    
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+      <div class="flex items-center space-x-3">
+        <div class="flex-shrink-0">
+          <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} text-white"></i>
+        </div>
+        <div class="text-white font-medium">${message}</div>
+      </div>
+    `;
+    
+    // Add styles
+    notification.style.cssText = `
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6'};
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      z-index: 10000;
+      font-family: 'Inter', sans-serif;
+      max-width: 400px;
+      animation: slideInRight 0.3s ease, fadeOut 0.3s ease 4.7s forwards;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+      if (notification.parentNode) {
+        notification.remove();
+      }
+    }, 5000);
+  }
+</script>
