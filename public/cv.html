@@ -107,6 +107,49 @@
             transform: scale(1.1);
             transition: transform 0.3s ease;
         }
+        
+        /* Animación de marquesina reversa */
+        .animate-marquee-reverse {
+            animation: marquee-reverse 25s linear infinite;
+        }
+        
+        @keyframes marquee-reverse {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+        
+        .cert-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 120px;
+            height: 140px;
+            justify-content: flex-start;
+        }
+        
+        .cert-item:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .cert-item h3 {
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+        .cert-item p {
+            height: 1rem;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
@@ -343,64 +386,84 @@
     <!-- Educación y Certificaciones -->
     <section class="section-padding bg-gray-50">
         <div class="container-custom">
-            <div class="max-w-4xl mx-auto">
+            <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-display font-bold text-gray-900 mb-4">
                         📚 Educación & Certificaciones
                     </h2>
+                    <p class="text-lg text-gray-600">Formación continua en tecnologías de vanguardia</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="card p-6">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-graduation-cap text-white"></i>
+                <!-- Marquesina de certificaciones -->
+                <div class="relative overflow-hidden bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 mb-8">
+                    <div class="flex animate-marquee-reverse space-x-8">
+                        <!-- Certificaciones -->
+                        <div class="flex items-center space-x-6 flex-shrink-0">
+                            <div class="cert-item">
+                                <div class="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center mb-3">
+                                    <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                                </div>
+                                <h3 class="font-display font-bold text-gray-900 text-sm">Analista de Sistemas</h3>
+                                <p class="text-blue-600 font-semibold text-xs">Institución Educativa</p>
+                                <p class="text-gray-500 text-xs">2021 - 2023</p>
                             </div>
-                            <div>
-                                <h3 class="font-display font-bold text-gray-900">Analista de Sistemas</h3>
-                                <p class="text-blue-600 font-semibold">Institución Educativa</p>
-                                <p class="text-gray-500 text-sm">2021 - 2023</p>
+                            <div class="cert-item">
+                                <div class="w-16 h-16 bg-orange-500 rounded-xl flex items-center justify-center mb-3">
+                                    <i class="fab fa-python text-white text-2xl"></i>
+                                </div>
+                                <h3 class="font-display font-bold text-gray-900 text-sm">Diplomatura Python</h3>
+                                <p class="text-orange-600 font-semibold text-xs">UTN Buenos Aires</p>
+                                <p class="text-gray-500 text-xs">En curso</p>
+                            </div>
+                            <div class="cert-item">
+                                <div class="w-16 h-16 bg-green-500 rounded-xl flex items-center justify-center mb-3">
+                                    <i class="fab fa-microsoft text-white text-2xl"></i>
+                                </div>
+                                <h3 class="font-display font-bold text-gray-900 text-sm">Diplomatura .NET</h3>
+                                <p class="text-green-600 font-semibold text-xs">UTN Buenos Aires</p>
+                                <p class="text-gray-500 text-xs">2023</p>
+                            </div>
+                            <div class="cert-item">
+                                <div class="w-16 h-16 bg-purple-500 rounded-xl flex items-center justify-center mb-3">
+                                    <i class="fab fa-react text-white text-2xl"></i>
+                                </div>
+                                <h3 class="font-display font-bold text-gray-900 text-sm">Full Stack React</h3>
+                                <p class="text-purple-600 font-semibold text-xs">UTN Buenos Aires</p>
+                                <p class="text-gray-500 text-xs">2021</p>
+                            </div>
+                            <div class="cert-item">
+                                <div class="w-16 h-16 bg-red-500 rounded-xl flex items-center justify-center mb-3">
+                                    <i class="fab fa-angular text-white text-2xl"></i>
+                                </div>
+                                <h3 class="font-display font-bold text-gray-900 text-sm">Angular Avanzado</h3>
+                                <p class="text-red-600 font-semibold text-xs">Cursos Especializados</p>
+                                <p class="text-gray-500 text-xs">2022</p>
+                            </div>
+                            <div class="cert-item">
+                                <div class="w-16 h-16 bg-indigo-500 rounded-xl flex items-center justify-center mb-3">
+                                    <i class="fab fa-aws text-white text-2xl"></i>
+                                </div>
+                                <h3 class="font-display font-bold text-gray-900 text-sm">AWS Cloud</h3>
+                                <p class="text-indigo-600 font-semibold text-xs">Certificación Cloud</p>
+                                <p class="text-gray-500 text-xs">2023</p>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="card p-6">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
-                                <i class="fab fa-python text-white"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-display font-bold text-gray-900">Diplomatura en Python</h3>
-                                <p class="text-orange-600 font-semibold">UTN Buenos Aires</p>
-                                <p class="text-gray-500 text-sm">En curso</p>
-                            </div>
-                        </div>
+                <!-- Estadísticas de formación -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-blue-600 mb-2">4+</div>
+                        <p class="text-gray-600">Certificaciones Completadas</p>
                     </div>
-
-                    <div class="card p-6">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
-                                <i class="fab fa-microsoft text-white"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-display font-bold text-gray-900">Diplomatura .NET</h3>
-                                <p class="text-green-600 font-semibold">UTN Buenos Aires</p>
-                                <p class="text-gray-500 text-sm">2023</p>
-                            </div>
-                        </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-green-600 mb-2">2</div>
+                        <p class="text-gray-600">En Progreso</p>
                     </div>
-
-                    <div class="card p-6">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center">
-                                <i class="fab fa-react text-white"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-display font-bold text-gray-900">Full Stack React</h3>
-                                <p class="text-purple-600 font-semibold">UTN Buenos Aires</p>
-                                <p class="text-gray-500 text-sm">2021</p>
-                            </div>
-                        </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-purple-600 mb-2">100%</div>
+                        <p class="text-gray-600">Formación Continua</p>
                     </div>
                 </div>
             </div>
