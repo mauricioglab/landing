@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+    <style>
+        body { margin: 0; padding: 20px; background: #f0f0f0; }
+        .favicon-container { 
+            display: inline-block; 
+            width: 32px; 
+            height: 32px; 
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            border-radius: 6px;
+            position: relative;
+            margin: 10px;
+        }
+        .favicon-m {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .favicon-dot {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            width: 6px;
+            height: 6px;
+            background: #f97316;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Favicon Preview (32x32)</h2>
+    <div class="favicon-container">
+        <div class="favicon-m">M</div>
+        <div class="favicon-dot"></div>
+    </div>
+    
+    <h2>Favicon Preview (16x16)</h2>
+    <div class="favicon-container" style="width: 16px; height: 16px;">
+        <div class="favicon-m" style="font-size: 10px;">M</div>
+        <div class="favicon-dot" style="width: 3px; height: 3px; top: 2px; right: 2px;"></div>
+    </div>
+    
+    <p>Para generar el ICO, puedes usar herramientas online como:</p>
+    <ul>
+        <li><a href="https://favicon.io/favicon-converter/" target="_blank">Favicon.io Converter</a></li>
+        <li><a href="https://convertio.co/svg-ico/" target="_blank">Convertio SVG to ICO</a></li>
+    </ul>
+</body>
+</html>
